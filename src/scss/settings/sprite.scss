@@ -1,81 +1,209 @@
-/*
-SCSS variables are information about icon's compiled state, stored under its original file name
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-avto-name: 'icon-avto';
+$icon-avto-x: 246px;
+$icon-avto-y: 82px;
+$icon-avto-offset-x: -246px;
+$icon-avto-offset-y: -82px;
+$icon-avto-width: 122px;
+$icon-avto-height: 78px;
+$icon-avto-total-width: 438px;
+$icon-avto-total-height: 338px;
+$icon-avto-image: '../img/icon-set.png';
+$icon-avto: (246px, 82px, -246px, -82px, 122px, 78px, 438px, 338px, '../img/icon-set.png', 'icon-avto', );
+$icon-bablo-name: 'icon-bablo';
+$icon-bablo-x: 374px;
+$icon-bablo-y: 60px;
+$icon-bablo-offset-x: -374px;
+$icon-bablo-offset-y: -60px;
+$icon-bablo-width: 64px;
+$icon-bablo-height: 58px;
+$icon-bablo-total-width: 438px;
+$icon-bablo-total-height: 338px;
+$icon-bablo-image: '../img/icon-set.png';
+$icon-bablo: (374px, 60px, -374px, -60px, 64px, 58px, 438px, 338px, '../img/icon-set.png', 'icon-bablo', );
+$icon-big-phone-name: 'icon-big-phone';
+$icon-big-phone-x: 118px;
+$icon-big-phone-y: 0px;
+$icon-big-phone-offset-x: -118px;
+$icon-big-phone-offset-y: 0px;
+$icon-big-phone-width: 128px;
+$icon-big-phone-height: 113px;
+$icon-big-phone-total-width: 438px;
+$icon-big-phone-total-height: 338px;
+$icon-big-phone-image: '../img/icon-set.png';
+$icon-big-phone: (118px, 0px, -118px, 0px, 128px, 113px, 438px, 338px, '../img/icon-set.png', 'icon-big-phone', );
+$icon-cvet-name: 'icon-cvet';
+$icon-cvet-x: 93px;
+$icon-cvet-y: 242px;
+$icon-cvet-offset-x: -93px;
+$icon-cvet-offset-y: -242px;
+$icon-cvet-width: 64px;
+$icon-cvet-height: 64px;
+$icon-cvet-total-width: 438px;
+$icon-cvet-total-height: 338px;
+$icon-cvet-image: '../img/icon-set.png';
+$icon-cvet: (93px, 242px, -93px, -242px, 64px, 64px, 438px, 338px, '../img/icon-set.png', 'icon-cvet', );
+$icon-divan-big-name: 'icon-divan-big';
+$icon-divan-big-x: 246px;
+$icon-divan-big-y: 0px;
+$icon-divan-big-offset-x: -246px;
+$icon-divan-big-offset-y: 0px;
+$icon-divan-big-width: 128px;
+$icon-divan-big-height: 82px;
+$icon-divan-big-total-width: 438px;
+$icon-divan-big-total-height: 338px;
+$icon-divan-big-image: '../img/icon-set.png';
+$icon-divan-big: (246px, 0px, -246px, 0px, 128px, 82px, 438px, 338px, '../img/icon-set.png', 'icon-divan-big', );
+$icon-divan-name: 'icon-divan';
+$icon-divan-x: 157px;
+$icon-divan-y: 242px;
+$icon-divan-offset-x: -157px;
+$icon-divan-offset-y: -242px;
+$icon-divan-width: 76px;
+$icon-divan-height: 52px;
+$icon-divan-total-width: 438px;
+$icon-divan-total-height: 338px;
+$icon-divan-image: '../img/icon-set.png';
+$icon-divan: (157px, 242px, -157px, -242px, 76px, 52px, 438px, 338px, '../img/icon-set.png', 'icon-divan', );
+$icon-kalendar-name: 'icon-kalendar';
+$icon-kalendar-x: 374px;
+$icon-kalendar-y: 118px;
+$icon-kalendar-offset-x: -374px;
+$icon-kalendar-offset-y: -118px;
+$icon-kalendar-width: 58px;
+$icon-kalendar-height: 58px;
+$icon-kalendar-total-width: 438px;
+$icon-kalendar-total-height: 338px;
+$icon-kalendar-image: '../img/icon-set.png';
+$icon-kalendar: (374px, 118px, -374px, -118px, 58px, 58px, 438px, 338px, '../img/icon-set.png', 'icon-kalendar', );
+$icon-karton-name: 'icon-karton';
+$icon-karton-x: 246px;
+$icon-karton-y: 160px;
+$icon-karton-offset-x: -246px;
+$icon-karton-offset-y: -160px;
+$icon-karton-width: 75px;
+$icon-karton-height: 75px;
+$icon-karton-total-width: 438px;
+$icon-karton-total-height: 338px;
+$icon-karton-image: '../img/icon-set.png';
+$icon-karton: (246px, 160px, -246px, -160px, 75px, 75px, 438px, 338px, '../img/icon-set.png', 'icon-karton', );
+$icon-kassa-name: 'icon-kassa';
+$icon-kassa-x: 0px;
+$icon-kassa-y: 128px;
+$icon-kassa-offset-x: 0px;
+$icon-kassa-offset-y: -128px;
+$icon-kassa-width: 110px;
+$icon-kassa-height: 114px;
+$icon-kassa-total-width: 438px;
+$icon-kassa-total-height: 338px;
+$icon-kassa-image: '../img/icon-set.png';
+$icon-kassa: (0px, 128px, 0px, -128px, 110px, 114px, 438px, 338px, '../img/icon-set.png', 'icon-kassa', );
+$icon-kover-name: 'icon-kover';
+$icon-kover-x: 110px;
+$icon-kover-y: 128px;
+$icon-kover-offset-x: -110px;
+$icon-kover-offset-y: -128px;
+$icon-kover-width: 111px;
+$icon-kover-height: 103px;
+$icon-kover-total-width: 438px;
+$icon-kover-total-height: 338px;
+$icon-kover-image: '../img/icon-set.png';
+$icon-kover: (110px, 128px, -110px, -128px, 111px, 103px, 438px, 338px, '../img/icon-set.png', 'icon-kover', );
+$icon-lineika-name: 'icon-lineika';
+$icon-lineika-x: 374px;
+$icon-lineika-y: 0px;
+$icon-lineika-offset-x: -374px;
+$icon-lineika-offset-y: 0px;
+$icon-lineika-width: 64px;
+$icon-lineika-height: 60px;
+$icon-lineika-total-width: 438px;
+$icon-lineika-total-height: 338px;
+$icon-lineika-image: '../img/icon-set.png';
+$icon-lineika: (374px, 0px, -374px, 0px, 64px, 60px, 438px, 338px, '../img/icon-set.png', 'icon-lineika', );
+$icon-mail-name: 'icon-mail';
+$icon-mail-x: 396px;
+$icon-mail-y: 176px;
+$icon-mail-offset-x: -396px;
+$icon-mail-offset-y: -176px;
+$icon-mail-width: 29px;
+$icon-mail-height: 22px;
+$icon-mail-total-width: 438px;
+$icon-mail-total-height: 338px;
+$icon-mail-image: '../img/icon-set.png';
+$icon-mail: (396px, 176px, -396px, -176px, 29px, 22px, 438px, 338px, '../img/icon-set.png', 'icon-mail', );
+$icon-marker-map-name: 'icon-marker-map';
+$icon-marker-map-x: 374px;
+$icon-marker-map-y: 176px;
+$icon-marker-map-offset-x: -374px;
+$icon-marker-map-offset-y: -176px;
+$icon-marker-map-width: 22px;
+$icon-marker-map-height: 32px;
+$icon-marker-map-total-width: 438px;
+$icon-marker-map-total-height: 338px;
+$icon-marker-map-image: '../img/icon-set.png';
+$icon-marker-map: (374px, 176px, -374px, -176px, 22px, 32px, 438px, 338px, '../img/icon-set.png', 'icon-marker-map', );
+$icon-palec-name: 'icon-palec';
+$icon-palec-x: 0px;
+$icon-palec-y: 242px;
+$icon-palec-offset-x: 0px;
+$icon-palec-offset-y: -242px;
+$icon-palec-width: 93px;
+$icon-palec-height: 96px;
+$icon-palec-total-width: 438px;
+$icon-palec-total-height: 338px;
+$icon-palec-image: '../img/icon-set.png';
+$icon-palec: (0px, 242px, 0px, -242px, 93px, 96px, 438px, 338px, '../img/icon-set.png', 'icon-palec', );
+$icon-plita-name: 'icon-plita';
+$icon-plita-x: 0px;
+$icon-plita-y: 0px;
+$icon-plita-offset-x: 0px;
+$icon-plita-offset-y: 0px;
+$icon-plita-width: 118px;
+$icon-plita-height: 128px;
+$icon-plita-total-width: 438px;
+$icon-plita-total-height: 338px;
+$icon-plita-image: '../img/icon-set.png';
+$icon-plita: (0px, 0px, 0px, 0px, 118px, 128px, 438px, 338px, '../img/icon-set.png', 'icon-plita', );
+$spritesheet-width: 438px;
+$spritesheet-height: 338px;
+$spritesheet-image: '../img/icon-set.png';
+$spritesheet-sprites: ($icon-avto, $icon-bablo, $icon-big-phone, $icon-cvet, $icon-divan-big, $icon-divan, $icon-kalendar, $icon-karton, $icon-kassa, $icon-kover, $icon-lineika, $icon-mail, $icon-marker-map, $icon-palec, $icon-plita, );
+$spritesheet: (438px, 338px, '../img/icon-set.png', $spritesheet-sprites, );
 
-.icon-home {
-  width: $icon-home-width;
-}
-
-The large array-like variables contain all information about a single icon
-$icon-home: x y offset_x offset_y width height total_width total_height image_path;
-
-At the bottom of this section, we provide information about the spritesheet itself
-$spritesheet: width height image $spritesheet-sprites;
-*/
-$mail-name: 'mail';
-$mail-x: 15px;
-$mail-y: 0px;
-$mail-offset-x: -15px;
-$mail-offset-y: 0px;
-$mail-width: 20px;
-$mail-height: 16px;
-$mail-total-width: 35px;
-$mail-total-height: 35px;
-$mail-image: 'icon-set.png';
-$mail: (15px, 0px, -15px, 0px, 20px, 16px, 35px, 35px, 'icon-set.png', 'mail', );
-$map-name: 'map';
-$map-x: 0px;
-$map-y: 0px;
-$map-offset-x: 0px;
-$map-offset-y: 0px;
-$map-width: 15px;
-$map-height: 23px;
-$map-total-width: 35px;
-$map-total-height: 35px;
-$map-image: 'icon-set.png';
-$map: (0px, 0px, 0px, 0px, 15px, 23px, 35px, 35px, 'icon-set.png', 'map', );
-$person-name: 'person';
-$person-x: 0px;
-$person-y: 23px;
-$person-offset-x: 0px;
-$person-offset-y: -23px;
-$person-width: 11px;
-$person-height: 12px;
-$person-total-width: 35px;
-$person-total-height: 35px;
-$person-image: 'icon-set.png';
-$person: (0px, 23px, 0px, -23px, 11px, 12px, 35px, 35px, 'icon-set.png', 'person', );
-$spritesheet-width: 35px;
-$spritesheet-height: 35px;
-$spritesheet-image: 'icon-set.png';
-$spritesheet-sprites: ($mail, $map, $person, );
-$spritesheet: (35px, 35px, 'icon-set.png', $spritesheet-sprites, );
-
-/*
-The provided mixins are intended to be used with the array-like variables
-
-.icon-home {
-  @include sprite-width($icon-home);
-}
-
-.icon-email {
-  @include sprite($icon-email);
-}
-
-Example usage in HTML:
-
-`display: block` sprite:
-<div class="icon-home"></div>
-
-To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
-
-// CSS
-.icon {
-  display: inline-block;
-}
-
-// HTML
-<i class="icon icon-home"></i>
-*/
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
 @mixin sprite-width($sprite) {
   width: nth($sprite, 5);
 }
@@ -102,12 +230,10 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   @include sprite-height($sprite);
 }
 
-/*
-The `sprites` mixin generates identical output to the CSS template
-  but can be overridden inside of SCSS
-
-@include sprites($spritesheet-sprites);
-*/
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
 @mixin sprites($sprites) {
   @each $sprite in $sprites {
     $sprite-name: nth($sprite, 10);

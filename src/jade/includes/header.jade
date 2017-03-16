@@ -1,13 +1,25 @@
 // header
 .page__header
-	.container
-		p(style="font-family: fontmain") Сьешь еще этих мягких французсих булок
-		p(style="font-family: fontmain; font-weight: bold") Сьешь еще этих мягких французсих булок
-		p(style="font-family: fontsecond") Сьешь еще этих мягких французсих булок
-		p(style="font-family: fontsecond; font-weight: bold") Сьешь еще этих мягких французсих булок
-		p(style="font-family: fontthird") Сьешь еще этих мягких французсих булок
-		p(style="font-family: fontthird; font-weight: bold") Сьешь еще этих мягких французсих булок
-		p(style="font-family: fontfour") Сьешь еще этих мягких французсих булок
-		p(style="font-family: fontfour; font-weight: bold") Сьешь еще этих мягких французсих булок
-		p(style="font-family: fontfive") Сьешь еще этих мягких французсих булок
-		p(style="font-family: fontfive; font-weight: bold") Сьешь еще этих мягких французсих булок
+	.container-fluid.main-header__container
+		span.tel.fl-right.absolute
+			a(href="tel:+7 (900) 235-55-11"): b +7 (900) 235-55-11
+			<br>
+			a(href="#callback").fancybox.btn.btn--blue обратный звонок
+		.main-header
+			.main-logo__wrap
+				a(href="/").main-logo
+					img(src="img/main-logo.png", alt="")
+			.main-header__top.clearfix
+				ul.header-menu.fl-left
+					li: a(href="#") ЭТАПЫ РАБОТЫ
+					li: a(href="#") КУХНИ
+					li: a(href="#") МЯГКАЯ МЕБЕЛЬ
+					li: a(href="#") КОНТАКТЫ
+				span.static.tel.fl-right
+					a(href="tel:+7 (900) 235-55-11"): b +7 (900) 235-55-11
+					<br>
+					a(href="#callback").fancybox.btn.btn--blue обратный звонок
+			.main-header__text
+				h1 стильная МЕБЕЛЬ <span>для</span><br> вашего ДОМА<br><span class="last">кухни и мягкая мебель</span>
+			
+// header end

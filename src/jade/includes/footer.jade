@@ -1,0 +1,77 @@
+// main-footer
+.main-footer
+	.container
+		.row
+			.col-xs-8
+				.row
+					.col-xs-5.main-footer__left
+						a(href="/").footer-logo
+							img(src="img/footer-logo.png", alt="Мебель стиль")
+						p Посетите наши магазины и убедитесь в том, что мы предлагаем только лучшее.
+						span.copyright © 2016 Мебельный салон "Стиль" 
+					.col-xs-6.main-footer__contacts
+						ul
+							li
+								i.icon.icon-marker-map
+								
+								p
+									b г. Краснодар,  <br>
+									|ул. Стасова 182, 3 портал площадка «Планета мебели» ТРК "Галактика"
+								p ул. Стасова, д. 178 ТРК "Медиаплаза", 3 портал, площадка "Планета мебели
+							li
+								i.icon.icon-mail
+								p general@mebelkrasnodar.ru;<br> mebel-style@yandex.ru
+			.col-xs-4.ta-center.main-footer__right
+				p Звоните нам сейчас
+				.tel +7 (900) 235-55-11 <br> 290-45-05                      
+				p или оставте заявку
+				a(href="#callback").fancybox.btn.btn--blue обратный звонок
+// main-footer end
+
+// popup
+.popup#callback
+	.big-form
+		.text
+			i.icon.icon-big-phone
+			p.name Обратный звонок
+			p.desc оставьте заявку, и мы свяжемся<br>
+		.input-group
+			.row
+				.col-xs-6
+					input(type="text" placeholder="Ваше имя:").input
+					input(type="text" placeholder="Ваш телефон:").input
+				.col-xs-6
+					input(type="text" placeholder="Ваш e-mail:").input
+					input(type="submit").btn.btn--yellow
+.card-popup#tovarPopup
+	.card
+		.left
+			.card__color
+				span цвет :
+				ul
+					li
+						img(src="img/color-vange.png", alt="Ванге")
+						span ванге
+					li
+						img(src="img/color-oreh.png", alt="Орех")
+						span орех
+			.card__preview
+				.preview__main
+					img(src="img/preview-big.jpg", alt="")
+				ul.preview__gallary
+					li: a(href="img/preview-small.jpg"): img(src="img/preview-small.jpg", alt="")
+					li: a(href="img/preview-small.jpg"): img(src="img/preview-small.jpg", alt="")
+					li: a(href="img/preview-small.jpg"): img(src="img/preview-small.jpg", alt="")
+		.right
+			p.type Мягкая мебель
+			p.name Диван титаник
+			.sep
+			.description
+				p Диван раскладной с коробом для белья (возможно изготовление кресла-кровати)
+				ul
+					li Размер: 1,55×0,90 м
+					li Размер спального места: 1,8×1,2 м
+					li Возможно изменение ширины дивана до 1,75 м. 
+					li Подлокотники МДФ
+			a(href="#")#buy.btn.btn--gold Заказать
+// popup end

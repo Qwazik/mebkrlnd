@@ -1,4 +1,210 @@
 extends _template
 
 block main
-	
+	// callback-form
+	.callback-form
+		.container
+			.row
+				.col-xs-12
+					p Сделайте заказ сейчас и получите доводчики на двери в подарок!
+				.col-xs-4
+					input(type="text" placeholder="Ваше имя").input
+				.col-xs-4
+					input(type="text" placeholder="Ваш телефон").input
+				.col-xs-4
+					input(type="submit" value="Оставить заявку").btn.btn--yellow
+	// callback-form end
+	// mebel-block
+	.mebel-block.mebel-block--right
+		.container
+			.mebel-block__header.wow.fadeInDown
+				h2
+					span.italic Красота и функциональность может быть недорогой
+					| Кухни на любой вкус и бюджет
+					span Кухня это сердце любого дома. Сделать это помещение удобным и стильным поможет продуманный гарнитур. Выбирайте из готовых вариантов или закажите проект кухни с индивидуальным оформлением – с нашими ценами вы можете позволить себе кухню мечты.
+			ul.mebel-block__features
+				li.wow.bounceInLeft(data-wow-delay="0.1s")
+					span.left
+						span.num
+						i.icon.icon-bablo
+					span.right Доступные цены на качественные кухни.
+				li.wow.bounceInLeft(data-wow-delay="0.2s")
+					span.left
+						span.num
+						i.icon.icon-lineika
+					span.right Гарнитур по вашим размерам
+				li.wow.bounceInLeft(data-wow-delay="0.3s")
+					span.left
+						span.num
+						i.icon.icon-kalendar
+					span.right Новая кухня за 20 дней
+	// mebel-block end
+	// tovar
+	.page__tovar.page__tovar--kuhni
+		.h2-wrap
+			h2.big Кухни
+		.container.tovar.tovar--kuhni
+			.h2.wow.fadeInUp Более <span class="big">100</span> цветовых решений кухни
+			.tovar-tabs
+				.tovar-tabs__nav.wow.fadeInUp
+					li.active: a(href="#tovar-mdf") МДФ
+					li: a(href="#tovar-plastic") ПЛАСТИК
+					li: a(href="#tovar-derevo") ДЕРЕВО
+				.tovar-tabs__content#tovar-mdf
+					.tovar-tabs__list
+						-for(var i=0;i<15;i++)
+							-var delay = (0.2+(i/10))+'s';
+							.tovar__item.wow.bounceIn(data-wow-delay=delay, data-wow-offset="100")
+								.image
+									img(src="img/kuhni1.jpg", alt="")
+								span.name МДФ «ТИТАНИК»
+								span.type Тип: прямой
+								.price-block
+									span.price 56 000
+									span.currency руб. за п/м
+								a(href="#tovarPopup").fancybox.btn.btn--brown Заказать
+					.tovar-tabs__scroll
+						.noUiSlider-tovar
+				.tovar-tabs__content#tovar-plastic
+					.tovar-tabs__list
+						-for(var i=0;i<5;i++)
+							.tovar__item
+								.image
+									img(src="img/kuhni1.jpg", alt="")
+								span.name ПЛАСТИК «ТИТАНИК»
+								span.type Тип: прямой
+								.price-block
+									span.price 56 000
+									span.currency руб. за п/м
+								a(href="#tovarPopup").fancybox.btn.btn--brown Заказать
+					.tovar-tabs__scroll
+						.noUiSlider-tovar
+				.tovar-tabs__content#tovar-derevo
+					.tovar-tabs__list
+						-for(var i=0;i<4;i++)
+							.tovar__item
+								.image
+									img(src="img/kuhni1.jpg", alt="")
+								span.name ДЕРЕВО «ТИТАНИК»
+								span.type Тип: прямой
+								.price-block
+									span.price 56 000
+									span.currency руб. за п/м
+								a(href="#tovarPopup").fancybox.btn.btn--brown Заказать
+					.tovar-tabs__scroll
+						.noUiSlider-tovar
+	// tovar end
+	// big form
+	.page__big-form
+		.container
+			.big-form.wow.fadeInRight
+				.text
+					i.icon.icon-plita
+					p.name Понравилась кухня
+					p.desc оставьте заявку, и мы свяжемся<br> с вами для расчета стоимости
+				.input-group
+					.row
+						.col-xs-6
+							input(type="text" placeholder="Ваше имя:").input
+							input(type="text" placeholder="Ваш телефон:").input
+						.col-xs-6
+							input(type="text" placeholder="Ваш e-mail:").input
+							input(type="submit").btn.btn--yellow
+	// big form end
+	// steps
+	.steps
+		.container.line-container
+			.lines
+				.line.wow.zoomIn(data-wow-delay="0.4s")
+				.line.wow.zoomIn(data-wow-delay="0.2s")
+				.line.wow.zoomIn(data-wow-delay="0.2s")
+				.line.wow.zoomIn(data-wow-delay="0.4s")
+		h2.big.wow.zoomInDown(data-wow-delay="0.4s") этапы работы
+		.container
+			.h2.wow.fadeInRight(data-wow-delay="0.2s") 4 шага к новому дивану
+				.italic.wow.fadeInRight(data-wow-delay="0.3s") этапы оформления заказа
+			.steps__list
+				.row
+					.col-xs-3
+						.steps__item.wow.zoomIn(data-wow-delay="0.4s")
+							.icon-wrap: .icon.icon-palec
+							.text выберите понравившуюся модель
+					.col-xs-3
+						.steps__item.wow.zoomIn(data-wow-delay="0.2s")
+							.icon-wrap: .icon.icon-kover
+							.text посещение салона для выбора<br> ткани
+					.col-xs-3
+						.steps__item.wow.zoomIn(data-wow-delay="0.2s")
+							.icon-wrap: .icon.icon-kassa
+							.text ВНЕСЕНИЕ ПРЕДОПЛАТЫ и  договор
+					.col-xs-3
+						.steps__item.wow.zoomIn(data-wow-delay="0.4s")
+							.icon-wrap: .icon.icon-avto
+							.text ДОСТАКА И СБОРКА МЕБЕЛИ
+	// steps end
+	// mebel-block
+	.mebel-block.mebel-block--left
+		.container
+			.mebel-block__header.wow.fadeInDown
+				h2
+					span.italic комфортно и современно
+					| Доступная мягкая мебель
+					span Мягкая мебель – это то, что делает ваш дом по-настоящему уютным и дарит приятные минуты отдыха. У нас вы можете купить стильную мебель для любой комнаты: спальни, гостиной, детской, кухни                 и прихожей.  Мы позаботились о том, чтобы наша мебель была доступна каждому.
+			ul.mebel-block__features
+				li.wow.bounceInRight(data-wow-delay="0.1s")
+					span.left
+						span.num
+						i.icon.icon-divan
+					span.right Выберите диван из наличия       или мы изготовим для вас нужный за 3-10 дней.
+				li.wow.bounceInRight(data-wow-delay="0.2s")
+					span.left
+						span.num
+						i.icon.icon-cvet
+					span.right В производстве используем только безопасные материалы и натуральное дерево
+				li.wow.bounceInRight(data-wow-delay="0.3s")
+					span.left
+						span.num
+						i.icon.icon-karton
+					span.right Большой выбор тканей для обивки
+	// mebel-block end
+	// tovar divani
+	.page__tovar.page__tovar--divani
+		.h2-wrap
+			h2.big мебель
+		.container.tovar.tovar--divani
+			.h2 Более <span class="big">30</span> цветовых мягкой мебели
+			.tovar-tabs
+				.tovar-tabs__content#tovar-a
+					.tovar-tabs__list
+						-for(var i=0;i<15;i++)
+							-var delay = (0.2+(i/10))+'s';
+							.tovar__item.wow.bounceIn(data-wow-delay=delay, data-wow-offset="100")
+								.image
+									img(src="img/divan.jpg", alt="")
+								span.name МДФ «ТИТАНИК»
+								span.type Тип: прямой
+								.price-block
+									span.price 56 000
+									span.currency руб. за п/м
+								a(href="#tovarPopup").fancybox.btn.btn--brown Заказать
+					.tovar-tabs__scroll
+						.noUiSlider-tovar
+	// tovar end
+	// big form map
+	.page__big-form.map
+		#map.wow.fadeIn
+		.container
+			.big-form.wow.fadeInRight
+				.text
+					i.icon.icon-divan-big
+					p.name ЕСТЬ ВОПРОСЫ?
+					p.desc мы готовы помочь определится <br> с правильным выбором
+				.input-group
+					.row
+						.col-xs-6
+							input(type="text" placeholder="Ваше имя:").input
+							input(type="text" placeholder="Ваш телефон:").input
+						.col-xs-6
+							input(type="text" placeholder="Ваш e-mail:").input
+							input(type="submit").btn.btn--yellow
+	// big form end
