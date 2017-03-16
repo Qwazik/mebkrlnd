@@ -59,9 +59,7 @@ $(function() {
 		$('.page__tovar').each(function(){
 
 			var that = $(this);
-			console.log(that)
 			if(that.find('.tovar-tabs__nav').length){
-				console.log('ok')
 				showActive(that);
 				that.find('.tovar-tabs__nav li').click(function(){
 					$(this).addClass('active');
@@ -86,7 +84,6 @@ $(function() {
 		var mainImg = $(this).closest('.card__preview').find('.preview__main img');
 		var img = $(this).attr('href');
 		mainImg.attr('src', img);
-		console.log(mainImg[0]);
 		return false;
 	});
 });
@@ -100,7 +97,8 @@ function initMap() {
 
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 16,
-    center: centerPos
+    center: centerPos,
+    scrollwheel:false
   });
 
   var marker1 = new google.maps.Marker({
@@ -114,6 +112,7 @@ function initMap() {
     map: map,
     icon: 'img/map-marker.png',
   });
+
 }
 
 		
