@@ -4128,8 +4128,11 @@ div, li, ul, input, textarea, p, h1, h2, h3, h4, h5, h6, header, footer {
   .icon + span {
     vertical-align: middle; }
 
+body {
+  min-width: 1200px; }
+
 .page {
-  min-width: 1300px;
+  min-width: 1170px;
   overflow: hidden; }
 
 .container {
@@ -4948,34 +4951,13 @@ h2, .h2 {
 
 @media screen and (max-width: 1600px) {
   .page__header {
-    min-height: 650px; }
+    min-height: 750px; }
   .tovar-tabs__nav {
     margin-bottom: 90px; }
   .page__big-form {
     height: 640px; }
   .tovar--divani .h2 {
     margin-bottom: 100px; } }
-
-@media screen and (max-width: 1400px) {
-  .btn--yellow {
-    height: 50px; }
-  .input {
-    height: 50px; }
-  html {
-    font-size: 14px; }
-  .page__header {
-    min-height: 550px; }
-  .tovar-tabs__nav {
-    margin-bottom: 90px; }
-  .page__big-form {
-    height: 540px; }
-  .tovar--divani .h2 {
-    margin-bottom: 100px; }
-  .big-form {
-    width: 670px; }
-    .big-form .text {
-      padding: 30px;
-      margin-bottom: 40px; } }
 
 @media (max-width: 1500px) {
   .page__header .tel.absolute {
@@ -5012,4 +4994,28 @@ h2, .h2 {
       margin-bottom: 150px; }
   .steps .big {
     font-size: 7em;
-    top: 180px; } }
+    top: 180px; }
+  .main-header__top {
+    padding-top: 30px;
+    padding-bottom: 40px; } }
+
+@media screen and (max-width: 1400px) {
+  .btn--yellow {
+    height: 50px; }
+  .input {
+    height: 50px; }
+  html {
+    font-size: 14px; }
+  .page__header {
+    min-height: 700px; }
+  .tovar-tabs__nav {
+    margin-bottom: 90px; }
+  .page__big-form {
+    height: 540px; }
+  .tovar--divani .h2 {
+    margin-bottom: 100px; }
+  .big-form {
+    width: 670px; }
+    .big-form .text {
+      padding: 30px;
+      margin-bottom: 40px; } }
