@@ -4122,17 +4122,15 @@ div, li, ul, input, textarea, p, h1, h2, h3, h4, h5, h6, header, footer {
 /*-------------------------------------------------*/
 /*  author styles
 /*-------------------------------------------------*/
-.page {
-  overflow: hidden; }
-
 .icon {
   display: inline-block;
   vertical-align: middle; }
   .icon + span {
     vertical-align: middle; }
 
-body {
-  min-width: 1300px; }
+.page {
+  min-width: 1300px;
+  overflow: hidden; }
 
 .container {
   min-width: 1170px; }
@@ -4947,6 +4945,37 @@ h2, .h2 {
   .steps .big {
     font-size: 8.5em;
     top: 180px; } }
+
+@media screen and (max-width: 1600px) {
+  .page__header {
+    min-height: 650px; }
+  .tovar-tabs__nav {
+    margin-bottom: 90px; }
+  .page__big-form {
+    height: 640px; }
+  .tovar--divani .h2 {
+    margin-bottom: 100px; } }
+
+@media screen and (max-width: 1400px) {
+  .btn--yellow {
+    height: 50px; }
+  .input {
+    height: 50px; }
+  html {
+    font-size: 14px; }
+  .page__header {
+    min-height: 550px; }
+  .tovar-tabs__nav {
+    margin-bottom: 90px; }
+  .page__big-form {
+    height: 540px; }
+  .tovar--divani .h2 {
+    margin-bottom: 100px; }
+  .big-form {
+    width: 670px; }
+    .big-form .text {
+      padding: 30px;
+      margin-bottom: 40px; } }
 
 @media (max-width: 1500px) {
   .page__header .tel.absolute {
